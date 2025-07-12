@@ -1,1 +1,1 @@
-# bajajhack
+# Bajaj Hack 2025
