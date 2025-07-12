@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bajaj Finserv Analyst Assistant</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <i class="fas fa-chart-line me-2"></i>
+                <span>Bajaj Finserv Analyst Assistant</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#"><i class="fas fa-home me-1"></i> Home</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container my-4">
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <div class="chat-container">
+                    <!-- Chat Header -->
+                    <div class="chat-header">
+                        <h5 class="mb-0">Financial Insights Assistant</h5>
+                        <small>Powered by AI analysis of earnings calls and stock data</small>
+                    </div>
+                    
+                    <!-- Chat Messages -->
+                    <div class="chat-messages" id="chat-messages">
+                        <div class="message bot-message p-3">
+                            <div class="d-flex align-items-center mb-2">
+                                <div class="bg-primary rounded-circle p-2 me-2">
+                                    <i class="fas fa-robot text-white"></i>
+                                </div>
+                                <strong>Analyst Assistant</strong>
+                            </div>
+                            <p>Welcome! I can help you analyze Bajaj Finserv's performance. Here's what I can do:</p>
+                            <ul>
+                                <li>Provide stock price metrics (highest/lowest/average)</li>
+                                <li>Compare performance across periods</li>
+                                <li>Answer questions from earnings calls</li>
+                                <li>Generate CFO commentary</li>
+                                <li>Extract structured data from transcripts</li>
+                            </ul>
+                            <p>Try asking: "What was the highest stock price in Jan-24?" or "Why is BAGIC facing headwinds?"</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Suggestions -->
+                    <div class="suggestions-container px-3 py-2 bg-light">
+                        <div class="d-flex flex-wrap">
+                            <div class="suggestion-chip" onclick="insertSuggestion('What was the average stock price across Mar-24?')">
+                                Avg price in Mar-24
+                            </div>
+                            <div class="suggestion-chip" onclick="insertSuggestion('Compare Bajaj Finserv from Jan-24 to Mar-24')">
+                                Compare Jan-Mar 2024
+                            </div>
+                            <div class="suggestion-chip" onclick="insertSuggestion('Tell me about organic traffic of Bajaj Markets')">
+                                Bajaj Markets traffic
+                            </div>
+                            <div class="suggestion-chip" onclick="insertSuggestion('Act as CFO and draft commentary for next investor call')">
+                                CFO Commentary
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Input Area -->
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="user-input" 
+                               placeholder="Ask about stock performance or business insights..." 
+                               aria-label="Ask a question">
+                        <button class="btn btn-primary" type="button" id="send-btn">
+                            <i class="fas fa-paper-plane"></i> Send
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
